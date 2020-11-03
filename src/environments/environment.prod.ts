@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+  production: true,
+  github: {
+    owner: 'ahhkk',
+    repo: 'Ski'
+  }
 };

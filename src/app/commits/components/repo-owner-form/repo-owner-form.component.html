@@ -1,0 +1,22 @@
+<form
+    class="form-group d-flex justify-content-end align-items-start"
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    novalidate
+>
+    <label class="input-group-sm">
+        <span>Owner:</span>
+        <input class="form-control" formControlName="owner" required>
+        <div *ngIf="form.controls.owner.errors" class="invalid-feedback">
+            The field is required
+        </div>
+    </label>
+    <label class="mx-4 input-group-sm">
+        Repo:
+        <input class="form-control" formControlName="repo" required>
+        <div *ngIf="form.controls.repo.errors?.required" class="invalid-feedback">
+            The field is required
+        </div>
+    </label>
+    <button class="btn btn-primary">List Commits</button>
+</form>

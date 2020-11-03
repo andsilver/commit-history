@@ -1,0 +1,18 @@
+<div class="font-weight-bold d-flex justify-content-between">
+    <a class="text-dark commit-message" [href]="commit.html_url">{{ message }}</a>
+    <small>{{ commitDate | date:'MMM d, yyyy HH:mm' }}</small>
+</div>
+<div class="text-secondary mt-1">
+    <ng-container *ngIf="committer">
+        <a [href]="committer.html_url">
+            <img class="committer-avatar" [src]="committer.avatar_url">
+            <span class="ml-2">{{ committer.login }}</span>
+        </a>
+        <span class="ml-1">committed at</span>
+    </ng-container>
+    <ng-container *ngIf="!committer">
+        <span>{{ item.committer.name }}</span>
+        <span class="ml-1">committed at</span>
+    </ng-container>
+    <span class="ml-1">{{ commitDate | date:'HH:mm' }}</span>
+</div>
