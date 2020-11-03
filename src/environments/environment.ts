@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   github: {
-    owner: 'ahhkk',
-    repo: 'Ski'
+    owner: 'angular',
+    repo: 'angular'
   }
 };
 
